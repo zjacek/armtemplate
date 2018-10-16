@@ -138,7 +138,7 @@
                 "mode": "Incremental",
                 "templateLink": {
                     "contentVersion": "1.0.0.0",
-                    "uri": "https://raw.githubusercontent.com/zjacek/armtemplate/blob/master/zadanie03/zadanie3.2/nsg.json"
+                    "uri": "https://raw.githubusercontent.com/zjacek/armtemplate/master/zadanie03/zadanie3.2/nsg.json"
                 },
                 "parameters": {
                     "networkSecurityGroupName": {
