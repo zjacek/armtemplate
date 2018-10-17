@@ -51,8 +51,8 @@ Konwencja nazewnicza
 
 ####Disk
 
- <nazwa maszyny wirtualnej>-disk-<numer porządkowy>
-
+[nazwa maszyny wirtualnej]-disk-<numer porządkowy>
+ 
 - "nazwa maszyny wirtualnej" - nazwa maszyny wirtualnej do której będzie przynależał dysk
 - "numer porządkowy" - 2 cyfry
 
