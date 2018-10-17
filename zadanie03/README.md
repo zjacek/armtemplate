@@ -18,41 +18,41 @@ Konwencja nazewnicza
 
 <krótka nazwa projektu>-<rodzaj œrodowiska>-rg-<numer porz¹dkowy>
 
-"krótka nazwa projektu" - nazwa identyfikuj¹ca projekt, 4 znaki
-"rodzaj œrodowiska" - np. [PRD|TST|DEV], 3 znaki
-"numer porz¹dkowy" - 2 cyfry
+- "krótka nazwa projektu" - nazwa identyfikuj¹ca projekt, 4 znaki
+- "rodzaj œrodowiska" - np. [PRD|TST|DEV], 3 znaki
+- "numer porz¹dkowy" - 2 cyfry
 
 ####Storage
 
 <krótka nazwa projektu><rodzaj œrodowiska>-st-<unikalny ci¹g znaków>
 
-"krótka nazwa projektu" - nazwa identyfikuj¹ca projekt, 4 znaki
-"rodzaj œrodowiska" - np. [PRD|TST|DEV], 3 znaki
-"unikalny ci¹g znaków" - unikalny ci¹g znaków generowany z funkcji "uniqueString(resourceGroup().id))", 13 znaków
-<ca³oœæ maksymalnie 24 znaki>
+- "krótka nazwa projektu" - nazwa identyfikuj¹ca projekt, 4 znaki
+- "rodzaj œrodowiska" - np. [PRD|TST|DEV], 3 znaki
+- "unikalny ci¹g znaków" - unikalny ci¹g znaków generowany z funkcji "uniqueString(resourceGroup().id))", 13 znaków
+- <ca³oœæ maksymalnie 24 znaki>
 
 ####Virtual Network
 
 <krótka nazwa projektu>-<rodzaj œrodowiska>-vnet-<numer porz¹dkowy>
 
-"krótka nazwa projektu" - nazwa identyfikuj¹ca projekt, 4 znaki
-"rodzaj œrodowiska" - np. [PRD|TST|DEV], 3 znaki
-"numer porz¹dkowy" - 2 cyfry
+- "krótka nazwa projektu" - nazwa identyfikuj¹ca projekt, 4 znaki
+- "rodzaj œrodowiska" - np. [PRD|TST|DEV], 3 znaki
+"- numer porz¹dkowy" - 2 cyfry
 
 ####Virtual Machine
 
 <krótka nazwa projektu><rodzaj œrodowiska><rola serwera><numer porz¹dkowy>
 
-"krótka nazwa projektu" - nazwa identyfikuj¹ca projekt, 4 znaki
-"rodzaj œrodowiska" - np. [PRD|TST|DEV], 3 znaki
-"rola serwera" - np. [app|web|dba], 3 znaki
-"numer porz¹dkowy" - 2 cyfry
-<ca³oœæ maksymalnie 15 znaków>
+- "krótka nazwa projektu" - nazwa identyfikuj¹ca projekt, 4 znaki
+- "rodzaj œrodowiska" - np. [PRD|TST|DEV], 3 znaki
+- "rola serwera" - np. [app|web|dba], 3 znaki
+- "numer porz¹dkowy" - 2 cyfry
+- <ca³oœæ maksymalnie 15 znaków>
 
 ####Disk
 
 <nazwa maszyny wirtualnej>-disk-<numer porz¹dkowy>
 
-"nazwa maszyny wirtualnej" - nazwa maszyny wirtualnej do której bêdzie przynale¿a³ dysk
-"numer porz¹dkowy" - 2 cyfry
+- "nazwa maszyny wirtualnej" - nazwa maszyny wirtualnej do której bêdzie przynale¿a³ dysk
+- "numer porz¹dkowy" - 2 cyfry
 
