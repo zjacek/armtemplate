@@ -2,15 +2,16 @@
     "Name": "vm-custom-role",
     "IsCustom": true,
     "Description": "Start/stop/write_to_support vm permission",
-    "Actions": [
-      "Microsoft.Compute/virtualMachines/start/action",
-      "Microsoft.Compute/virtualMachines/powerOff/action",
-      "Microsoft.Support/supportTickets/write"
-    ],
-    "NotActions": [
-  
-    ],
+  "Actions": [
+    "Microsoft.Compute/virtualMachines/read",
+    "Microsoft.Compute/virtualMachines/start/action",
+    "Microsoft.Compute/virtualMachines/powerOff/action",
+    "Microsoft.Compute/virtualMachines/deallocate/action",
+    "Microsoft.Compute/virtualMachines/restart/action",
+    "Microsoft.Support/*"
+  ],
+    "NotActions": [],
     "AssignableScopes": [
       "/subscriptions/<subscription-id>"
     ]
-  }
+}
