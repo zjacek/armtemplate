@@ -1,0 +1,50 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/<subscription ID>/resourceGroups/MyKeyVault/providers/Microsoft.KeyVault/vaults/mykeyvault"
+                },
+                "secretName": "adminpass"
+            }
+        },
+        "networkInterfaceName1": {
+            "value": "azur-tst-nic-01"
+        },
+        "networkInterfaceName2": {
+            "value": "azur-tst-nic-02"
+        },
+        "virtualNetworkName": {
+            "value": "azur-tst-vnet-01"
+        },
+        "addressPrefix": {
+            "value": "10.0.0.0/20"
+        },
+        "subnetName1": {
+            "value": "azur-tst-subnet-01"
+        },
+        "subnetName2": {
+            "value": "azur-tst-subnet-02"
+        },
+        "subnetPrefix1": {
+            "value": "10.0.1.0/24"
+        },
+        "subnetPrefix2": {
+            "value": "10.0.2.0/24"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B2s"
+        },
+        "virtualMachineName1": {
+            "value": "azurtstapp01"
+        },
+        "virtualMachineName2": {
+            "value": "azurtstdba01"
+        },
+        "adminUsername": {
+            "value": "jacek"
+        }
+    }
+}
