@@ -4,78 +4,57 @@
     "parameters": {
         "networkInterfaceName1": {
             "type": "string",
-            "defaultValue": "azur-tst-nic-01"
         },
         "networkInterfaceName2": {
             "type": "string",
-            "defaultValue": "azur-tst-nic-02"
         },
         "virtualNetworkName": {
             "type": "string",
-            "defaultValue": "azur-tst-vnet-01"
         },
         "addressPrefix": {
             "type": "string",
-            "defaultValue": "10.0.0.0/20",
             "metadata": {
                 "description": "Address prefix"
             }
         },
         "subnetName1": {
             "type": "string",
-            "defaultValue": "azur-tst-subnet-01",
             "metadata": {
                 "description": "Subnet 1"
             }
         },
         "subnetName2": {
             "type": "string",
-            "defaultValue": "azur-tst-subnet-02",
             "metadata": {
                 "description": "Subnet 2"
             }
         },
         "subnetPrefix1": {
             "type": "string",
-            "defaultValue": "10.0.1.0/24",
             "metadata": {
                 "description": "Subnet 1 Prefix"
             }
         },
         "subnetPrefix2": {
             "type": "string",
-            "defaultValue": "10.0.2.0/24",
             "metadata": {
                 "description": "Subnet 2 Prefix"
             }
         },
         "virtualMachineSize": {
             "type": "string",
-            "defaultValue": "Standard_B2s"
         },
         "virtualMachineName1": {
             "type": "string",
-            "defaultValue": "azurtstapp01"
         },
         "virtualMachineName2": {
             "type": "string",
-            "defaultValue": "azurtstdba01"
         },
-        "adminUsername": { 
-            "reference": {
-                "keyVault": {
-                    "id": "/subscription/<subscription-ID>/resourceGroups/azure-tst-rg-01/providers/Microsoft.KeyVault/vaults/azure-tst-kv-01"
-                },
-                "secretName": "jacek"
-            }
-         },
+        "adminUsername": {
+            "type": "string"
+        },
         "adminPassword": {
-            "reference": {
-                "keyVault": {
-                    "id": "/subscription/<subscription-ID>/resourceGroups/azure-tst-rg-01/providers/Microsoft.KeyVault/vaults/azure-tst-kv-01"
-                },
-                "secretName": "jacek"
-            }
+            "type": "securestring"
         }
     },
     "variables": {
