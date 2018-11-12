@@ -9,7 +9,8 @@
 3)	Stwórz trzecią funkcję, która reaguje na request http i dla podanej w parametrze daty z dokładnością do dnia (żeby było prościej) zwraca z bazy Azure SQL wszystkie komunikaty z tego dnia, które tam zostały zapisane, najlepiej w postaci JSON’a
 4)	Stwórz Azure API Management (kiedy będziesz miał już wszystkie inne elementy gotowe) i wystaw na Azure API Management funkcję z zadania nr 3. Dodatkowo, dodaj do wywołania tej funkcji politykę, która nie pozwala jej wywołać częściej w minucie niż trzy razy
 
-Ad.1 -> TimerTrigger1
-Ad.2 -> QueueTrigger1
-Ad.3 -> HttpTrigger1
+Ad.1 -> TimerTrigger1 <br>
+Ad.2 -> QueueTrigger1 <br>
+Ad.3 -> HttpTrigger1 <br>
+
 
