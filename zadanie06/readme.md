@@ -12,5 +12,21 @@
 Ad.1 -> TimerTrigger1 <br>
 Ad.2 -> QueueTrigger1 <br>
 Ad.3 -> HttpTrigger1 <br>
-
+Ad.4 ->:
+<policies>
+    <inbound>
+        <base />
+        <set-backend-service id="apim-generated-policy" backend-id="func03" />
+        <rate-limit-by-key calls="3" renewal-period="60" counter-key="@(context.Request.IpAddress)" />
+    </inbound>
+    <backend>
+        <base />
+    </backend>
+    <outbound>
+        <base />
+    </outbound>
+    <on-error>
+        <base />
+    </on-error>
+</policies>
 
