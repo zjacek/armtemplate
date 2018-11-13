@@ -14,7 +14,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequest req, ILogger log)
 {
     log.LogInformation("C# HTTP trigger function processed a request.");
 
-    var cnnString  = Environment.GetEnvironmentVariable("ConnectionString03");
+    var cnnString  = Environment.GetEnvironmentVariable("ConnectionString04");
     string data1 = req.Query["data1"];
     log.LogInformation($"Data: {data1}");
     var json1 = new StringBuilder();
