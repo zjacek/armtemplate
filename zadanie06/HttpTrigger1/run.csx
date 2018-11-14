@@ -9,39 +9,31 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using System.Web.Http;
+using Dapper;
 
-public static async Task<HttpResponseMessage> Run(HttpRequest req, ILogger log)
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 {
     log.LogInformation("C# HTTP trigger function processed a request.");
 
     var cnnString  = Environment.GetEnvironmentVariable("ConnectionString04");
     string data1 = req.Query["data1"];
     log.LogInformation($"Data: {data1}");
-    var json1 = new StringBuilder();
     
     string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
     dynamic data = JsonConvert.DeserializeObject(requestBody);
     data1 = data1 ?? data?.data1;
 
-    using (SqlConnection conn = new SqlConnection(cnnString))
+    using (var conn = new SqlConnection(cnnString))
     {
         conn.Open();
 
-        // Select         
-        var dbSelect = $"select * from functionlogs where czas = '{data1}' FOR JSON PATH";
+        // Select            
+        String dbSelect = "select * from functionlogs where czas LIKE CONCAT('%',@data1,'%');";
                    
-        // Execute 
-        SqlCommand cmd = new SqlCommand(dbSelect, conn);
-        SqlDataReader reader = cmd.ExecuteReader();
+        // Execute  
+        var json1 = conn.Query(dbSelect, new {data1});
+        //string jsonData = JsonConvert.SerializeObject(json1);
 
-        while (reader.Read())
-        {
-            json1.Append(reader.GetValue(0));
-        }
+        return new OkObjectResult(json1);
     }
-
-  return data1 != null
-    ? new HttpResponseMessage(System.Net.HttpStatusCode.OK) { Content = new StringContent(json1.ToString()) }
-    : new HttpResponseMessage(System.Net.HttpStatusCode.BadRequest) { Content = new StringContent("Brak zmiennej data1") };
-
 }
